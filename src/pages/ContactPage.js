@@ -68,6 +68,7 @@ const ContactUs = () => {
             {/* Google Map */}
             <div>
               <iframe
+                title="Prince Fireworks Location Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3157.6483622829525!2d77.80341137686672!3d9.454163782476551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03e2d40f03a2af%3A0xb74cdd975bf1612b!2sSivakasi!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
                 width="100%"
                 height="300"
@@ -116,7 +117,7 @@ const ContactUs = () => {
           {[
             "What do you mean by Green Crackers?",
             "Which is the fireworks capital of India?",
-            "What is the speciality of Prince Fireworks?",
+            "What is the specialty of Prince Fireworks?",
             "When was Prince Fireworks started?",
             "Which company makes the biggest fountain crackers in India?",
           ].map((question, index) => (
@@ -145,10 +146,10 @@ const ContactUs = () => {
             Fireworks Products.
           </p>
           <iframe
+            title="Prince Fireworks YouTube Video"
             width="100%"
             height="400"
             src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

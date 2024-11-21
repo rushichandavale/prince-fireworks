@@ -105,21 +105,21 @@ const Footer = () => {
         <div className="container mx-auto px-6 md:px-16 flex justify-between items-center text-sm">
           <p>© 2024 Prince Fireworks. All rights reserved.</p>
           <div className="flex space-x-4">
-            <a href="#">
+            <a href="facebook.com">
               <img
                 src="/path-to-facebook-icon.png"
                 alt="Facebook"
                 className="h-6"
               />
             </a>
-            <a href="#">
+            <a href="instagram.com">
               <img
                 src="/path-to-instagram-icon.png"
                 alt="Instagram"
                 className="h-6"
               />
             </a>
-            <a href="#">
+            <a href="youtube.com">
               <img
                 src="/path-to-youtube-icon.png"
                 alt="YouTube"

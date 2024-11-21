@@ -55,7 +55,7 @@ const WhyChooseUsSection = () => {
             </p>
             {/* Button */}
             <a
-              href="#"
+              href="/#"
               className="inline-block text-pink-500 font-semibold text-sm border-b-2 border-pink-500 hover:text-pink-700 hover:border-pink-700 transition-all duration-300"
             >
               See Collection

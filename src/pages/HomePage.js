@@ -9,7 +9,6 @@ import ProductsSection from './../components/ProductsSection';
 import FAQ from './../components/FAQ';
 import YouTubeSection from "../components/YouTubeSection";
 
-
 const HomePage = () => {
   return (
     <>
@@ -18,6 +17,7 @@ const HomePage = () => {
       <AboutSection />
       <WhyChooseUsSection />
       <ProductsSection />
+      
       <FAQ />
 
       {/* New Components */}

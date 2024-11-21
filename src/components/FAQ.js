@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
-  // FAQ Data inside the component
+  // FAQ Data
   const faqs = [
     { question: "What do you mean by Green Crackers?", answer: "Green Crackers are environmentally friendly crackers with reduced emissions." },
     { question: "Which is the fireworks capital of India?", answer: "Sivakasi is considered the fireworks capital of India." },
@@ -11,49 +11,55 @@ const FAQ = () => {
     { question: "When was Ajanta Fireworks started?", answer: "Ajanta Fireworks was established in 1974." },
     { question: "Which company makes the biggest fountain crackers in India?", answer: "Ajanta Fireworks manufactures the largest fountain crackers in India." },
     { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
-    { question: "Which company has the largest variety of children Fireworks In India?", answer: "Ajanta Fireworks offers the largest variety of children's fireworks." },
-    { question: "How many new products, Ajanta Fireworks are launching this Diwali?", answer: "Ajanta Fireworks is launching 25 new products this Diwali." },
-    { question: "What is the vision of Ajanta Fireworks?", answer: "To light up celebrations while maintaining safety and environmental responsibility." },
-    { question: "Are Ajanta Fireworks Products available, throughout the year?", answer: "Yes, they are available year-round through dealers." },
-    { question: "How to Contact Ajanta Fireworks for inquiries?", answer: "You can contact Ajanta Fireworks via their website or customer support number." },
-    { question: "Where to find the functions of Ajanta Fireworks crackers online?", answer: "Functions and details are available on their official website." },
-    { question: "Under which law does Fireworks Industry belong to?", answer: "The Fireworks industry in India is regulated under the Explosives Act, 1884." },
-    { question: "When was the first fireworks factory stated in Sivakasi?", answer: "The first factory in Sivakasi was started in 1940." },
+    { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." }, { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." }, { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." }, { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." }, { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." }, { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
   ];
 
-  // Toggle function to handle the opening and closing of answers
+  // Toggle function
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className="container mx-auto py-16 px-4">
-      <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+    <section className="py-16 px-4 bg-gradient-to-b from-gray-100 to-gray-300">
+      {/* Button-like Title */}
+      <div className="flex justify-center mb-8">
+        <button className="bg-pink-500 text-white font-semibold px-6 py-2 rounded-full shadow-md hover:bg-pink-600 focus:outline-none">
+          Most Common Questions
+        </button>
+      </div>
+
+      <h2 className="text-5xl font-bold mb-8 text-center text-gray-800">
+        Frequently Asked Questions
+      </h2>
+
       <div className="space-y-6 max-w-4xl mx-auto">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="border rounded-lg shadow-lg p-4 bg-white cursor-pointer"
+            className="border border-gray-300 rounded-lg shadow-md p-4 bg-white cursor-pointer"
             onClick={() => toggleFAQ(index)}
           >
             {/* Question */}
             <div className="flex justify-between items-center">
-              <h3 className="font-semibold text-lg">{faq.question}</h3>
+              <h3 className="font-semibold text-lg text-gray-800">{faq.question}</h3>
               <span
-                className={`text-xl transform transition-transform duration-300 ${
-                  openIndex === index ? "rotate-45" : ""
+                className={`text-2xl transform transition-transform duration-300 ${
+                  openIndex === index ? "rotate-45" : "rotate-0"
                 }`}
+                style={{ color: "#ec4899" }} // Pink color for the + icon
               >
                 {openIndex === index ? "−" : "+"}
               </span>
             </div>
 
-            {/* Answer */}
-            {openIndex === index && (
-              <div className="mt-4 text-gray-700 leading-relaxed">
-                {faq.answer}
-              </div>
-            )}
+            {/* Answer with Smooth Animation */}
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                openIndex === index ? "max-h-screen mt-4" : "max-h-0"
+              }`}
+            >
+              <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+            </div>
           </div>
         ))}
       </div>
