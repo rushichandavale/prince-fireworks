@@ -11,7 +11,11 @@ const FAQ = () => {
     { question: "When was Ajanta Fireworks started?", answer: "Ajanta Fireworks was established in 1974." },
     { question: "Which company makes the biggest fountain crackers in India?", answer: "Ajanta Fireworks manufactures the largest fountain crackers in India." },
     { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
-    { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." }, { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." }, { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." }, { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." }, { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." }, { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
+    { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
+    { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
+    { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
+    { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
+    { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
   ];
 
   // Toggle function
@@ -23,12 +27,12 @@ const FAQ = () => {
     <section className="py-16 px-4 bg-gradient-to-b from-gray-100 to-gray-300">
       {/* Button-like Title */}
       <div className="flex justify-center mb-8">
-        <button className="bg-pink-500 text-white font-semibold px-6 py-2 rounded-full shadow-md hover:bg-pink-600 focus:outline-none">
+        <span className="bg-pink-500 text-white font-semibold px-6 py-2 rounded-full shadow-md hover:bg-pink-600 focus:outline-none">
           Most Common Questions
-        </button>
+        </span>
       </div>
 
-      <h2 className="text-5xl font-bold mb-8 text-center text-gray-800">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 text-center text-gray-800">
         Frequently Asked Questions
       </h2>
 
@@ -41,7 +45,7 @@ const FAQ = () => {
           >
             {/* Question */}
             <div className="flex justify-between items-center">
-              <h3 className="font-semibold text-lg text-gray-800">{faq.question}</h3>
+              <h3 className="font-semibold text-lg sm:text-xl lg:text-2xl text-gray-800">{faq.question}</h3>
               <span
                 className={`text-2xl transform transition-transform duration-300 ${
                   openIndex === index ? "rotate-45" : "rotate-0"
@@ -58,7 +62,7 @@ const FAQ = () => {
                 openIndex === index ? "max-h-screen mt-4" : "max-h-0"
               }`}
             >
-              <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+              <p className="text-gray-700 text-base sm:text-lg lg:text-xl leading-relaxed">{faq.answer}</p>
             </div>
           </div>
         ))}

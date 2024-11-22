@@ -30,29 +30,36 @@ const WhyChooseUsSection = () => {
   ];
 
   return (
-    <div className="container mx-auto py-16 px-28">
-      <h2 className="text-5xl font-bold text-center mb-8 text-gray-800">Why Choose Us?</h2>
-      <div className="flex justify-between gap-8">
+    <div className="container mx-auto py-16 px-6 md:px-12 lg:px-20">
+      {/* Heading */}
+      <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 text-gray-800">
+        Why Choose Us?
+      </h2>
+
+      {/* Features Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white border-2 border-black p-6 rounded-2xl max-w-sm h-[400px] flex flex-col items-center justify-between transition-transform transform hover:scale-105"
+            className="bg-white border-2 border-black p-6 rounded-2xl flex flex-col items-center justify-between transition-transform transform hover:scale-105"
           >
             {/* Icon */}
             <img
               src={feature.icon}
               alt={feature.title}
-              className="w-16 h-16 mb-4"
+              className="w-12 h-12 mb-4"
             />
+            
             {/* Title */}
-            <h3 className="font-semibold text-xl text-center text-gray-800 mb-5 px-10 transition-colors duration-300 hover:text-pink-500">
+            <h3 className="font-semibold text-lg md:text-xl text-center text-gray-800 mb-4 transition-colors duration-300 hover:text-pink-500">
               {feature.title}
             </h3>
             
             {/* Description */}
-            <p className="text-gray-600 text-start mb-5 px-10">
+            <p className="text-gray-600 text-sm md:text-base text-center mb-4 px-4 sm:px-2 lg:px-0">
               {feature.description}
             </p>
+            
             {/* Button */}
             <a
               href="/#"
@@ -68,6 +75,3 @@ const WhyChooseUsSection = () => {
 };
 
 export default WhyChooseUsSection;
-
-
-
