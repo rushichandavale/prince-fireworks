@@ -11,11 +11,6 @@ const FAQ = () => {
     { question: "When was Ajanta Fireworks started?", answer: "Ajanta Fireworks was established in 1974." },
     { question: "Which company makes the biggest fountain crackers in India?", answer: "Ajanta Fireworks manufactures the largest fountain crackers in India." },
     { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
-    { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
-    { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
-    { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
-    { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
-    { question: "How can we buy Ajanta Fireworks crackers?", answer: "Ajanta Fireworks products are available through authorized dealers and online platforms." },
   ];
 
   // Toggle function
@@ -58,7 +53,7 @@ const FAQ = () => {
 
             {/* Answer with Smooth Animation */}
             <div
-              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
                 openIndex === index ? "max-h-screen mt-4" : "max-h-0"
               }`}
             >

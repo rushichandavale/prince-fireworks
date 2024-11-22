@@ -92,7 +92,7 @@ const InnovativeFireworks = () => {
               <li
                 key={index}
                 className={`border border-gray-300 rounded-lg shadow-md transition-all duration-300 ${
-                  openIndex === index ? "bg-pink-50" : "bg-white"
+                  openIndex === index ? "bg-pink-50" : "bg-[#f9e8cc]"
                 }`}
               >
                 {/* Title and Toggle Button */}

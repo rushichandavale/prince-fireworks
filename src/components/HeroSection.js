@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import Lottie from "react-lottie";
 import firework1 from "../assets/animations/firework1.json";
 import firework2 from "../assets/animations/firework2.json";
@@ -108,7 +108,9 @@ const HeroSection = () => {
           {categories.map((category, index) => (
             <div
               key={index}
-              className="bg-[#f7f0e5] rounded-2xl shadow-md p-4 transition-shadow hover:shadow-lg"
+              className={`bg-[#f7f0e5] rounded-2xl shadow-md p-4 transition-shadow hover:shadow-lg ${
+                expandedIndex === index ? "bg-pink-50" : " bg-[#f9e8cc]"
+              }`}
             >
               {/* Category Header */}
               <div
@@ -129,7 +131,7 @@ const HeroSection = () => {
 
               {/* Description Section */}
               <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
                   expandedIndex === index ? "max-h-40 mt-4" : "max-h-0"
                 }`}
               >
