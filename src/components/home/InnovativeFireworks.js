@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
-import innovativeImg from "../assets/images/rockets-flying-fireworks.webp";
-import bombImg from "../assets/images/bomb.webp"; // Replace with the path to the bomb image
+import innovativeImg from "../../assets/images/rockets-flying-fireworks.webp";
+import bombImg from "../../assets/images/bomb.webp"; // Replace with the path to the bomb image
 import Lottie from "react-lottie";
-import fireworkLottie from "../assets/animations/firework2.json"; // Replace with the Lottie animation file
+import fireworkLottie from "../../assets/animations/firework2.json"; // Replace with the Lottie animation file
 
 const InnovativeFireworks = () => {
   const [openIndex, setOpenIndex] = useState(null);

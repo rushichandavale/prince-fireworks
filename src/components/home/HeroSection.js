@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Lottie from "react-lottie";
-import firework1 from "../assets/animations/firework1.json";
-import firework2 from "../assets/animations/firework2.json";
-import firework3 from "../assets/animations/firework3.json";
-import scrollImgLeft from "../assets/images/home/home-main-4.webp";
-import scrollImgRight from "../assets/images/home/ajanta-fireworks-2-1448x2048.webp";
+import firework1 from "../../assets/animations/firework1.json";
+import firework2 from "../../assets/animations/firework2.json";
+import firework3 from "../../assets/animations/firework3.json";
+import scrollImgLeft from "../../assets/images/home/home-main-4.webp";
+import scrollImgRight from "../../assets/images/home/ajanta-fireworks-2-1448x2048.webp";
 
 const HeroSection = () => {
   const [scrollPosition, setScrollPosition] = useState(0);

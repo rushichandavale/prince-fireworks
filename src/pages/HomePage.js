@@ -1,12 +1,12 @@
-import InnovativeFireworks from "../components/InnovativeFireworks";
-import CelebrationSection from "../components/CelebrationSection";
-import SafeToUse from "../components/SafeToUse";
+import InnovativeFireworks from "../components/home/InnovativeFireworks";
+import CelebrationSection from "../components/home/CelebrationSection";
+import SafeToUse from "../components/home/SafeToUse";
 import BusinessEnquiry from "../components/BusinessEnquiry";
-import AboutSection from './../components/AboutSection';
-import HeroSection from './../components/HeroSection';
-import WhyChooseUsSection from './../components/WhyChooseUsSection';
-import ProductsSection from './../components/ProductsSection';
-import FAQ from './../components/FAQ';
+import AboutSection from '../components/home/AboutSection';
+import HeroSection from "../components/home/HeroSection";
+import WhyChooseUsSection from '../components/home/WhyChooseUsSection';
+import ProductsSection from '../components/home/ProductsSection';
+import FAQ from "../components/FAQ";
 import YouTubeSection from "../components/YouTubeSection";
 
 const HomePage = () => {

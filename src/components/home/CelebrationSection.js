@@ -1,8 +1,9 @@
+// CelebrationSection.js
 import React from "react";
-import CountUp from "react-countup";
-import celbImg from "../assets/images/celebration3.png";
-import celbImg1 from "../assets/images/celebration4.gif";
-import celbImg2 from "../assets/images/celebration3 - Copy.png";
+import CountingStat from "../CountingStat";
+import celbImg from "../../assets/images/celebration3.png";
+import celbImg1 from "../../assets/images/celebration4.gif";
+import celbImg2 from "../../assets/images/celebration3 - Copy.png";
 
 const CelebrationSection = () => {
   return (
@@ -12,10 +13,9 @@ const CelebrationSection = () => {
         One World. One Language of Celebration!
       </h1>
 
-
       <div className="relative bg-gradient-to-r from-[#1f0d46] via-[#342057] to-[#1f0d46] text-white py-20 px-6 overflow-hidden">
-      {/* Decorative Circles */}
-      {[...Array(10)].map((_, index) => (
+        {/* Decorative Circles */}
+        {[...Array(10)].map((_, index) => (
           <div
             key={index}
             className="absolute w-[50px] h-[50px] bg-white bg-opacity-20 rounded-full blur-sm"
@@ -27,6 +27,7 @@ const CelebrationSection = () => {
             }}
           ></div>
         ))}
+
         {/* Decorative Images */}
         <img
           src={celbImg}
@@ -67,7 +68,8 @@ const CelebrationSection = () => {
 
           {/* Description */}
           <p className="text-xl md:text-3xl font-semibold max-w-md mx-auto mb-36">
-            "Experience premium fireworks at unbeatable prices, where quality meets affordability in every dazzling display"
+            "Experience premium fireworks at unbeatable prices, where quality
+            meets affordability in every dazzling display"
           </p>
         </div>
       </div>
@@ -75,35 +77,25 @@ const CelebrationSection = () => {
       {/* Stats Section */}
       <div className="relative bg-yellow-300 py-16">
         <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center relative z-10 px-6">
-          {/* Products */}
-          <div className="group">
-            <h3 className="text-5xl md:text-6xl font-extrabold text-orange-500 group-hover:scale-105 transition transform">
-              <CountUp end={250} duration={2.5} />+
-            </h3>
-            <p className="text-lg md:text-xl font-bold text-gray-800 mt-2">
-              Products
-            </p>
-          </div>
-
-          {/* Dealers */}
-          <div className="group">
-            <h3 className="text-5xl md:text-6xl font-extrabold text-orange-500 group-hover:scale-105 transition transform">
-              <CountUp end={700} duration={2.5} />+
-            </h3>
-            <p className="text-lg md:text-xl font-bold text-gray-800 mt-2">
-              Dealers
-            </p>
-          </div>
-
-          {/* Customers */}
-          <div className="group">
-            <h3 className="text-5xl md:text-6xl font-extrabold text-orange-500 group-hover:scale-105 transition transform">
-              <CountUp end={10000} duration={3} separator="," />+
-            </h3>
-            <p className="text-lg md:text-xl font-bold text-gray-800 mt-2">
-              Customers
-            </p>
-          </div>
+          <CountingStat
+            end={250}
+            duration={2.5}
+            label="Products"
+            color="text-orange-500"
+          />
+          <CountingStat
+            end={700}
+            duration={2.5}
+            label="Dealers"
+            color="text-orange-500"
+          />
+          <CountingStat
+            end={10000}
+            duration={3}
+            separator=","
+            label="Customers"
+            color="text-orange-500"
+          />
         </div>
       </div>
     </>

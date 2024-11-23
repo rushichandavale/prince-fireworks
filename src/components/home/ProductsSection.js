@@ -1,14 +1,14 @@
 import React from "react";
-import traditionalImage from "../assets/images/products/category-01.webp";
-import childrenImage from "../assets/images/products/category-02.webp";
-import aerialImage from "../assets/images/products/category-03.webp";
-import flowerImage from "../assets/images/products/category-11.webp";
-import chakrasImage from "../assets/images/products/category-05.webp";
-import rocketImage from "../assets/images/products/category-06.webp";
-import bombsImage from "../assets/images/products/category-07.webp";
-import eliteImage from "../assets/images/products/category-08.webp";
-import sparklersImage from "../assets/images/products/category-09.webp";
-import fountainsImage from "../assets/images/products/category-10.webp";
+import traditionalImage from "../../assets/images/products/category-01.webp";
+import childrenImage from "../../assets/images/products/category-02.webp";
+import aerialImage from "../../assets/images/products/category-03.webp";
+import flowerImage from "../../assets/images/products/category-11.webp";
+import chakrasImage from "../../assets/images/products/category-05.webp";
+import rocketImage from "../../assets/images/products/category-06.webp";
+import bombsImage from "../../assets/images/products/category-07.webp";
+import eliteImage from "../../assets/images/products/category-08.webp";
+import sparklersImage from "../../assets/images/products/category-09.webp";
+import fountainsImage from "../../assets/images/products/category-10.webp";
 
 const ProductsSection = () => {
   const products = [

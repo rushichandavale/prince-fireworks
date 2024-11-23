@@ -1,6 +1,6 @@
 import React from "react";
-import starImage from "../assets/images/home-main-8.webp"; // Replace with the path to your star image
-import crackerImage from "../assets/images/chakkar.webp"; // Replace with the path to your cracker image
+import starImage from "../../assets/images/home-main-8.webp"; // Replace with the path to your star image
+import crackerImage from "../../assets/images/chakkar.webp"; // Replace with the path to your cracker image
 
 const AboutSection = () => {
   return (

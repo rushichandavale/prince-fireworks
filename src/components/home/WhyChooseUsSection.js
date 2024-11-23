@@ -1,9 +1,9 @@
 import React from "react";
 // Image imports
-import ecoIcon from "../assets/images/bulb.svg"; // Replace with your eco-friendly icon
-import qualityIcon from "../assets/images/star.svg"; // Replace with your quality icon
-import fireworksIcon from "../assets/images/hand.svg"; // Replace with your fireworks icon
-import trustIcon from "../assets/images/heart.svg"; // Replace with your trust icon
+import ecoIcon from "../../assets/images/bulb.svg"; // Replace with your eco-friendly icon
+import qualityIcon from "../../assets/images/star.svg"; // Replace with your quality icon
+import fireworksIcon from "../../assets/images/hand.svg"; // Replace with your fireworks icon
+import trustIcon from "../../assets/images/heart.svg"; // Replace with your trust icon
 
 const WhyChooseUsSection = () => {
   const features = [

@@ -56,7 +56,7 @@ code {
 
 
 
-
+/* about_hero */
 
 @keyframes float {
   0% {
@@ -68,4 +68,28 @@ code {
   100% {
     transform: translateY(0) scale(1);
   }
+}
+
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+
+/* testmonial */
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.card-float {
+  animation: float 5s ease-in-out infinite;
 }
