@@ -1,45 +1,110 @@
-/* Default state for the testimonial container */
-.relative {
-    position: relative;
+/* Scoped styling for the testimonials section */
+.testimonial-section {
+  position: relative;
+}
+
+.testimonial-section .relative {
+  position: relative;
+}
+
+/* Slide In - Next */
+.testimonial-section .slide-next-enter {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.testimonial-section .slide-next-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+.testimonial-section .slide-next-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+.testimonial-section .slide-next-exit-active {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+/* Slide In - Previous */
+.testimonial-section .slide-prev-enter {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.testimonial-section .slide-prev-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+.testimonial-section .slide-prev-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+.testimonial-section .slide-prev-exit-active {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+/* Styles for buttons */
+.testimonial-section button {
+  transition: all 0.3s ease;
+}
+
+.testimonial-section button:hover {
+  background-color: #9b4f9f;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .testimonial-section .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  
-  /* Slide In - Next */
-  .slide-next-enter {
-    transform: translateX(100%);
-    opacity: 0;
+
+  .testimonial-section .text-4xl {
+    font-size: 2.5rem; /* Adjusting title size for smaller screens */
   }
-  .slide-next-enter-active {
-    transform: translateX(0);
-    opacity: 1;
-    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+
+  .testimonial-section .w-12 {
+    width: 48px;
   }
-  .slide-next-exit {
-    transform: translateX(0);
-    opacity: 1;
+
+  .testimonial-section .h-12 {
+    height: 48px;
   }
-  .slide-next-exit-active {
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+
+  /* Make the large buttons hidden on mobile */
+  .testimonial-section .hidden-md {
+    display: none;
   }
-  
-  /* Slide In - Previous */
-  .slide-prev-enter {
-    transform: translateX(-100%);
-    opacity: 0;
+
+  /* Mobile-specific styles for arrows */
+  .testimonial-section .absolute {
+    padding-left: 16px;
+    padding-right: 16px;
   }
-  .slide-prev-enter-active {
-    transform: translateX(0);
-    opacity: 1;
-    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+
+  /* Fixing positioning of the small arrows */
+  .testimonial-section .absolute.left-0 {
+    left: 16px;
   }
-  .slide-prev-exit {
-    transform: translateX(0);
-    opacity: 1;
+  .testimonial-section .absolute.right-0 {
+    right: 16px;
   }
-  .slide-prev-exit-active {
-    transform: translateX(100%);
-    opacity: 0;
-    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+
+  /* Ensure arrows are visible on mobile */
+  .testimonial-section .absolute.md:hidden {
+    display: block;
   }
-  
+}
+
+/* Make the container height fixed to avoid any shifting */
+.testimonial-section section {
+  min-height: 400px;
+  max-height: 400px; /* Prevents height changes when content changes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

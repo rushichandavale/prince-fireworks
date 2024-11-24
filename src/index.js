@@ -1,17 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom/client'; // Correct import for React 18+
+import './index.css'; // Your global styles
+import App from './App'; // Main App component
+import reportWebVitals from './reportWebVitals'; // Optional for performance tracking
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root')); // Creating root for React 18
 root.render(
   <React.StrictMode>
-    <App />
+    <App /> {/* Your main application component */}
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Optional: If you want to measure performance in your app
+reportWebVitals(); // You can pass a logging function like console.log

@@ -70,7 +70,7 @@ const HeroSection = () => {
       <div className="absolute bottom-0 right-0 flex items-end gap-[-50px]">
         {/* First Image: Moves Left to Right */}
         <div
-          className="w-[120px] md:w-[180px] lg:w-[200px] transition-transform duration-[500ms] ease-in-out"
+          className=" w-[120px] md:w-[180px] lg:w-[200px] transition-transform duration-[500ms] ease-in-out"
           style={{ transform: `translateX(${scrollPosition * 0.3}px)` }}
         >
           <img src={scrollImgLeft} alt="Scroll Left" className="w-full" />

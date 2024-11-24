@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from '../assets/images/Ajanta-logo-transparent.webp';
 
 const Header = () => {
@@ -9,8 +9,12 @@ const Header = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
-    <header className="bg-[#f7f0e5] shadow-md  top-0 z-50">
+    <header className="bg-[#f7f0e5] shadow-md top-0 z-50">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
         <Link to="/" className="flex items-center">
@@ -26,32 +30,102 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link to="/" className="text-gray-700 hover:text-red-600 transition-colors duration-300">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "text-red-600 font-bold transition-colors duration-300"
+                : "text-gray-700 hover:text-red-600 transition-colors duration-300"
+            }
+            
+          >
             Home
-          </Link>
-          <Link to="/about" className="text-gray-700 hover:text-red-600 transition-colors duration-300">
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? "text-red-600 font-bold transition-colors duration-300"
+                : "text-gray-700 hover:text-red-600 transition-colors duration-300"
+            }
+          >
             About
-          </Link>
-          <Link to="/products" className="text-gray-700 hover:text-red-600 transition-colors duration-300">
+          </NavLink>
+          <NavLink
+            to="/products"
+            className={({ isActive }) =>
+              isActive
+                ? "text-red-600 font-bold transition-colors duration-300"
+                : "text-gray-700 hover:text-red-600 transition-colors duration-300"
+            }
+          >
             Products
-          </Link>
-          <Link to="/contact" className="text-gray-700 hover:text-red-600 transition-colors duration-300">
+          </NavLink>
+          <NavLink
+            to="/safety-tips"
+            className={({ isActive }) =>
+              isActive
+                ? "text-red-600 font-bold transition-colors duration-300"
+                : "text-gray-700 hover:text-red-600 transition-colors duration-300"
+            }
+          >
+            Safety Tips
+          </NavLink>
+          <NavLink
+            to="/gallery"
+            className={({ isActive }) =>
+              isActive
+                ? "text-red-600 font-bold transition-colors duration-300"
+                : "text-gray-700 hover:text-red-600 transition-colors duration-300"
+            }
+          >
+            Gallery
+          </NavLink>
+          <NavLink
+            to="/where-to-buy"
+            className={({ isActive }) =>
+              isActive
+                ? "text-red-600 font-bold transition-colors duration-300"
+                : "text-gray-700 hover:text-red-600 transition-colors duration-300"
+            }
+          >
+            Where To Buy?
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive
+                ? "text-red-600 font-bold transition-colors duration-300"
+                : "text-gray-700 hover:text-red-600 transition-colors duration-300"
+            }
+          >
             Contact Us
-          </Link>
-          <a
-            href="/shop"
-            className="bg-green-500 text-white py-2 px-4 rounded-full hover:bg-green-600 transition-colors duration-300"
+          </NavLink>
+          <NavLink
+            to="/blogs"
+            className={({ isActive }) =>
+              isActive
+                ? "text-red-600 font-bold transition-colors duration-300"
+                : "text-gray-700 hover:text-red-600 transition-colors duration-300"
+            }
+          >
+            Blogs
+          </NavLink>
+          <NavLink
+            to="/shop"
+            className={({ isActive }) =>
+              isActive
+                ? "bg-green-600 text-white py-2 px-4 rounded-full transition-colors duration-300"
+                : "bg-green-500 text-white py-2 px-4 rounded-full hover:bg-green-600 transition-colors duration-300"
+            }
           >
             Shop Now
-          </a>
+          </NavLink>
         </nav>
 
         {/* Mobile Menu Icon */}
         <div className="md:hidden">
-          <button
-            onClick={toggleMobileMenu}
-            className="text-gray-800 focus:outline-none"
-          >
+          <button onClick={toggleMobileMenu} className="text-gray-800 focus:outline-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -74,24 +148,106 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white shadow-md p-4 absolute top-16 left-0 w-full z-40">
           <nav className="space-y-4">
-            <Link to="/" className="text-gray-700 hover:text-red-600 block transition-colors duration-300">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-red-600 font-bold block transition-colors duration-300"
+                  : "text-gray-700 hover:text-red-600 block transition-colors duration-300"
+              }
+              
+              onClick={closeMobileMenu}
+            >
               Home
-            </Link>
-            <Link to="/about" className="text-gray-700 hover:text-red-600 block transition-colors duration-300">
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-red-600 font-bold block transition-colors duration-300"
+                  : "text-gray-700 hover:text-red-600 block transition-colors duration-300"
+              }
+              onClick={closeMobileMenu}
+            >
               About
-            </Link>
-            <Link to="/products" className="text-gray-700 hover:text-red-600 block transition-colors duration-300">
+            </NavLink>
+            <NavLink
+              to="/products"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-red-600 font-bold block transition-colors duration-300"
+                  : "text-gray-700 hover:text-red-600 block transition-colors duration-300"
+              }
+              onClick={closeMobileMenu}
+            >
               Products
-            </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-red-600 block transition-colors duration-300">
+            </NavLink>
+            <NavLink
+              to="/safety-tips"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-red-600 font-bold block transition-colors duration-300"
+                  : "text-gray-700 hover:text-red-600 block transition-colors duration-300"
+              }
+              onClick={closeMobileMenu}
+            >
+              Safety Tips
+            </NavLink>
+            <NavLink
+              to="/gallery"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-red-600 font-bold block transition-colors duration-300"
+                  : "text-gray-700 hover:text-red-600 block transition-colors duration-300"
+              }
+              onClick={closeMobileMenu}
+            >
+              Gallery
+            </NavLink>
+            <NavLink
+              to="/where-to-buy"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-red-600 font-bold block transition-colors duration-300"
+                  : "text-gray-700 hover:text-red-600 block transition-colors duration-300"
+              }
+              onClick={closeMobileMenu}
+            >
+              Where To Buy?
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-red-600 font-bold block transition-colors duration-300"
+                  : "text-gray-700 hover:text-red-600 block transition-colors duration-300"
+              }
+              onClick={closeMobileMenu}
+            >
               Contact Us
-            </Link>
-            <a
-              href="/shop"
-              className="bg-green-500 text-white py-2 px-4 rounded-full hover:bg-green-600 block transition-colors duration-300"
+            </NavLink>
+            <NavLink
+              to="/blogs"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-red-600 font-bold block transition-colors duration-300"
+                  : "text-gray-700 hover:text-red-600 block transition-colors duration-300"
+              }
+              onClick={closeMobileMenu}
+            >
+              Blogs
+            </NavLink>
+            <NavLink
+              to="/shop"
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-green-600 text-white py-2 px-4 rounded-full block transition-colors duration-300"
+                  : "bg-green-500 text-white py-2 px-4 rounded-full hover:bg-green-600 block transition-colors duration-300"
+              }
+              onClick={closeMobileMenu}
             >
               Shop Now
-            </a>
+            </NavLink>
           </nav>
         </div>
       )}
